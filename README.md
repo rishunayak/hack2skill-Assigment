@@ -12,4 +12,4 @@
 
 ## To get the Data :- https://hack2skillbackend2.onrender.com/getVideo?page=1
 
-## To get the Search Data by title or description :- https://hack2skillbackend2.onrender.com/searchVideo
+## To get the Search Data by title or description :- https://hack2skillbackend2.onrender.com/searchVideo?query="cricket"
