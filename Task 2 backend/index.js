@@ -80,14 +80,14 @@ app.get("/searchVideo",async(req,res)=>  // search get method for title or descr
 
     
 
-     try
+      try
      {
         const query = req.query.query;
+        const page=req.query.page || 1
 
+        const videoData=await VideoData.find({$or: [{ title: { $regex: query, $options: "i" } }, { description: { $regex: query, $options: "i" } } ]}).limit(20)
 
-        const videoData=await VideoData.find({$or: [{ title: { $regex: query, $options: "i" } }, { description: { $regex: query, $options: "i" } } ]})
-
-        res.send(videoData)
+        res.send({videoData:videoData})
      }
      catch(e)
      {
